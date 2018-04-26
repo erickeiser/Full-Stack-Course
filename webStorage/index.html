@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Web Storage</title>
+</head>
+
+<body>
+  <div id="name">
+
+  </div>
+
+
+  <script>
+    if () {
+      // Store an item
+      localStorage.setItem('name', 'Eric Keiser');
+
+      //Get item back 
+      console.log(localStorage.getItem('name'));
+
+      //Remove an item
+      localStorage.removeItem('name');
+
+      if(localStorage.name) {
+        document.getElementById('name').innerHTML = localStorage.getItem('name');
+      } else {
+        document.getElementById('name').innerHTML = 'no name found';
+      }
+    };
+  </script>
+</body>
+
+</html>

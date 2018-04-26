@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Geolocation</title>
+</head>
+<!--Geolocation will allow you to ask for a users location. if they accept you can use the location and display it on a map. -->
+<body>
+  <button onclick="getlocation()">Get Coords</button>
+  <h1 id="coords"></h1>
+  
+
+  <script>
+  var x = document.getElementById("coords");
+  function geolocation() {
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      x.innerHTML ="Geolocation is not supported";
+    }
+    function showPosition(position) {
+      console.log(position.coords.latitude);
+    }
+  }
+  </script>
+</body>
+</html>

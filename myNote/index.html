@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyNote || Project</title>
+  <script>
+    
+    function getNote() {
+      if(localStorage.getItem('note')) {
+        var note = localStorage.getItem('note');
+      } else {
+        var note = 'Go ahead and save this note for local storage';
+      }
+      document.getElementById('note').innerHTML = note;
+    }
+
+    function saveNote(){
+
+    }
+
+  </script>
+</head>
+<body>
+  <header>
+    <h1>MyNote</h1>
+  </header>
+
+  <section id="container">
+    <div id="note" contenteditable="true">
+
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <a href="#" class="clear">Clear Note</a>
+    </div>
+    <p>My Note &copy; 2018</p>
+  </footer>
+  
+
+
+  <script>
+  getNote();
+  </script>
+</body>
+</html>

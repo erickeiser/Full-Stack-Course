@@ -18,20 +18,29 @@
 <body>
   <canvas id="myCanvas" width="300" height="300"></canvas>
 
-
+  <!--When passing the numbers in (75,75,150,150) the first number will represent from the left over, the second from the top down  third will be the width and the last will be the height-->
   <script>
     var c = document.getElementById('myCanvas');
     var ctx = c.getContext('2d');
-    /*
+    
     //Rectangle
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = 'green';
     ctx.fillRect(75,75, 150, 150);
-    */
-
+    
     //Line
-    ctx.moveTo(0.0);
-    ctx.lineTo(250, 150);
+    ctx.moveTo(0,0);
+    ctx.lineTo(100, 150);
     ctx.stroke();
+
+    //Circle
+    ctx.beginPath();
+    ctx.arc(150,150,60,0,2*Math.PI);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = 'blue';
+    ctx.stroke();
+   
   </script>
 </body>
 
